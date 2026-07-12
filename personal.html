@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>ประวัติส่วนตัว</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว | กรเอก มหาโภคินวงษ์</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#FAEBD7">
-<h1>ประวัติส่วนตัว</h1>
-<img src="images/พานทอง.png" width= "200 ">
-<p>
-  ชื่อ กรเอก มหาโภคินวงษ์<br>
-  ชื่อเล่น โอคิว<br>
-  วันเกิด 30/11/2550<br>
-  เบอร์ 0918914615<br>
-  หมายเลขบัตรประจำตัว 1209702399811<br>
-  ส่วนสูง 169<br>
-  น้ำหนัก 64<br>
-</p>
+<body>
+
+<nav class="topnav">
+  <div class="brand">
+    <span class="brand-badge">OQ</span>
+    กรเอก มหาโภคินวงษ์
+  </div>
+  <button class="nav-toggle" aria-label="เปิดเมนู">&#9776;</button>
+  <ul class="navlinks">
+    <li><a href="index.html">หน้าหลัก</a></li>
+    <li><a href="personal.html" aria-current="page">ประวัติส่วนตัว</a></li>
+    <li><a href="education.html">ประวัติการศึกษา</a></li>
+    <li><a href="activities.html">ผลงาน</a></li>
+    <li><a href="contact.html">ติดต่อ</a></li>
+  </ul>
+</nav>
+
+<main>
+  <header class="page-header">
+    <span class="eyebrow">01 · About</span>
+    <h1>ประวัติส่วนตัว</h1>
+  </header>
+
+  <div class="card">
+    <div class="profile-block">
+      <!-- รูปโปรไฟล์: เปลี่ยนไฟล์ในโฟลเดอร์ images/ แล้วแก้ src ด้านล่างได้เลย -->
+      <img class="profile-photo" src="images/พานทอง.png" alt="รูปกรเอก มหาโภคินวงษ์">
+
+      <dl class="info-list">
+        <dt>ชื่อ</dt><dd>กรเอก มหาโภคินวงษ์</dd>
+        <dt>ชื่อเล่น</dt><dd>โอคิว</dd>
+        <dt>วันเกิด</dt><dd>30/11/2550</dd>
+        <dt>เบอร์โทร</dt><dd>091-891-4615</dd>
+        <dt>ส่วนสูง</dt><dd>169 ซม.</dd>
+        <dt>น้ำหนัก</dt><dd>64 กก.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="note">
+    หมายเหตุ: ไม่ควรเผยแพร่เลขบัตรประจำตัวประชาชนบนเว็บไซต์สาธารณะ เพราะอาจถูกนำไปใช้แอบอ้างหรือสวมรอยได้ จึงไม่นำมาแสดงในหน้านี้
+  </div>
+</main>
+
+<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
