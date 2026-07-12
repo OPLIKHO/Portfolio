@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>Portfolio ของ กรเอก มหาโภคินวงษ์</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio ของ กรเอก มหาโภคินวงษ์</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#FAEBD7">
-<h1>หน้าหลัก</h1>
-<a href="personal.html">ประวัติส่วนตัว</a><br>
-<a href="education.html">ประวัติการศึกษา</a><br>
-<a href="activities.html">ผลงาน</a><br>
-<a href="contact.html">ช่องทางติดต่อ</a><br>
+<body>
+ 
+<nav class="topnav">
+  <div class="brand">
+    <span class="brand-badge">OQ</span>
+    กรเอก มหาโภคินวงษ์
+  </div>
+  <button class="nav-toggle" aria-label="เปิดเมนู">&#9776;</button>
+  <ul class="navlinks">
+    <li><a href="index.html" aria-current="page">หน้าหลัก</a></li>
+    <li><a href="personal.html">ประวัติส่วนตัว</a></li>
+    <li><a href="education.html">ประวัติการศึกษา</a></li>
+    <li><a href="activities.html">ผลงาน</a></li>
+    <li><a href="contact.html">ติดต่อ</a></li>
+  </ul>
+</nav>
+ 
+<main>
+  <section class="hero">
+    <div>
+      <h1>สวัสดีครับ ผมชื่อ<br><span class="accent">โอคิว</span> — กรเอก มหาโภคินวงษ์</h1>
+      <p class="lede">นักเรียนชั้นมัธยมศึกษาปีที่ 6 เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา และผลงานของผมไว้ในที่เดียว เพื่อใช้แนะนำตัวสำหรับการศึกษาต่อและโอกาสต่างๆ</p>
+      <div class="hero-cta">
+        <a href="personal.html" class="btn btn-solid">ดูประวัติส่วนตัว</a>
+        <a href="contact.html" class="btn btn-ghost">ติดต่อผม</a>
+      </div>
+    </div>
+ 
+    <div class="id-card">
+      <div class="id-card-top">
+        <span class="school">STUDENT PORTFOLIO ID</span>
+        <span class="gold-dot"></span>
+      </div>
+      <div class="id-card-body">
+        <div class="id-photo">
+          <!-- เปลี่ยนรูปได้ที่ personal.html -->
+          <span>รูปนักเรียน</span>
+        </div>
+        <div class="id-info">
+          <div class="name">กรเอก มหาโภคินวงษ์</div>
+          <div class="role">ชั้นมัธยมศึกษาปีที่ 6</div>
+          <div class="role">ชื่อเล่น: โอคิว</div>
+        </div>
+      </div>
+      <div class="id-card-strip"></div>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="grid-links">
+      <a class="link-card" href="personal.html">
+        <span class="num">01</span>
+        <h3>ประวัติส่วนตัว</h3>
+        <p>ข้อมูลทั่วไปและรูปภาพของผม</p>
+      </a>
+      <a class="link-card" href="education.html">
+        <span class="num">02</span>
+        <h3>ประวัติการศึกษา</h3>
+        <p>เส้นทางการเรียนตั้งแต่อดีตถึงปัจจุบัน</p>
+      </a>
+      <a class="link-card" href="activities.html">
+        <span class="num">03</span>
+        <h3>ผลงาน</h3>
+        <p>ผลงานและกิจกรรมที่เคยทำ</p>
+      </a>
+      <a class="link-card" href="contact.html">
+        <span class="num">04</span>
+        <h3>ติดต่อ</h3>
+        <p>ช่องทางการติดต่อผม</p>
+      </a>
+    </div>
+  </section>
+</main>
+ 
+<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
+ 
+<script src="script.js"></script>
 </body>
 </html>
