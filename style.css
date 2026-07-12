@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Sarabun:wght@300;400;600&display=swap');
+
+:root {
+  --teal: #1F4E45;
+  --teal-dark: #14332C;
+  --gold: #D9A441;
+  --gold-light: #F0C876;
+  --bg: #F3F1E8;
+  --card: #FFFFFF;
+  --ink: #182420;
+  --ink-soft: #4A5952;
+  --line: #DAD5C4;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  color: var(--teal-dark);
+  margin: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6vw;
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.brand-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.85);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.navlinks a:hover,
+.navlinks a[aria-current="page"] {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.navlinks a[aria-current="page"] {
+  background: var(--gold);
+  color: var(--teal-dark);
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: block; }
+  .navlinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--teal-dark);
+    padding: 10px 6vw 16px;
+    display: none;
+    gap: 2px;
+  }
+  .navlinks.open { display: flex; }
+  .navlinks a { padding: 12px 14px; border-radius: 8px; }
+}
+
+/* ---------- Page shell ---------- */
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 56px 6vw 80px;
+}
+
+.page-header {
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 14px;
+}
+
+.eyebrow {
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.page-header h1 { font-size: 2rem; }
+
+/* ---------- Hero (index page): Student ID card ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  padding: 64px 0 48px;
+}
+
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.25;
+}
+
+.hero .accent { color: var(--gold); }
+
+.hero p.lede {
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  margin-top: 18px;
+  max-width: 46ch;
+}
+
+.hero-cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.92rem;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid var(--teal);
+  transition: transform 0.15s, background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.btn-solid { background: var(--teal); color: #fff; }
+.btn-solid:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.btn-ghost { color: var(--teal); }
+.btn-ghost:hover { background: var(--teal); color: #fff; transform: translateY(-2px); }
+
+/* Student ID card visual */
+.id-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(20,51,44,0.18);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transform: rotate(-2deg);
+  transition: transform 0.3s;
+}
+.id-card:hover { transform: rotate(0deg); }
+
+.id-card-top {
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.id-card-top .school {
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+.id-card-top .gold-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--gold);
+}
+
+.id-card-body {
+  display: flex;
+  gap: 18px;
+  padding: 22px 20px;
+  align-items: center;
+}
+
+.id-photo {
+  width: 88px;
+  height: 108px;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 2px solid var(--gold);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.id-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.id-info .name { font-family: 'Kanit', sans-serif; font-weight: 600; font-size: 1.15rem; color: var(--teal-dark); }
+.id-info .role { color: var(--ink-soft); font-size: 0.9rem; margin-top: 4px; }
+.id-card-strip {
+  height: 8px;
+  background: repeating-linear-gradient(45deg, var(--gold), var(--gold) 10px, var(--gold-light) 10px, var(--gold-light) 20px);
+}
+
+/* ---------- Nav cards on index ---------- */
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.link-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(20,51,44,0.12);
+  border-color: var(--gold);
+}
+
+.link-card .num {
+  font-family: 'Kanit', sans-serif;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.link-card h3 { margin-top: 8px; font-size: 1.15rem; }
+.link-card p { color: var(--ink-soft); font-size: 0.9rem; margin: 8px 0 0; }
+
+/* ---------- Content sections ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin-bottom: 22px;
+}
+
+.profile-block {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid var(--gold);
+  object-fit: cover;
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+dl.info-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px 20px;
+  margin: 0;
+}
+dl.info-list dt {
+  font-family: 'Kanit', sans-serif;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+dl.info-list dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ---------- Timeline (education) ---------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 3px solid var(--gold);
+}
+
+.timeline li {
+  position: relative;
+  padding: 4px 0 28px 26px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 3px solid var(--gold);
+}
+
+.timeline .year {
+  font-family: 'Kanit', sans-serif;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: block;
+}
+
+.timeline h3 { margin-top: 4px; font-size: 1.1rem; }
+.timeline p { color: var(--ink-soft); margin: 6px 0 0; font-size: 0.95rem; }
+
+/* ---------- Works / activities grid ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.work-card .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.work-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.work-card h3 { font-size: 1.05rem; }
+.work-card p { color: var(--ink-soft); font-size: 0.9rem; margin: 6px 0 0; }
+.work-card .tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.72rem;
+  color: var(--teal);
+  background: rgba(31,78,69,0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-item .label {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.contact-item .value { font-weight: 600; }
+
+.note {
+  background: rgba(217,164,65,0.12);
+  border: 1px dashed var(--gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 30px 6vw 50px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
