@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติการศึกษา | กรเอก มหาโภคินวงษ์</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<nav class="topnav">
+  <div class="brand">
+    <span class="brand-badge">OQ</span>
+    กรเอก มหาโภคินวงษ์
+  </div>
+  <button class="nav-toggle" aria-label="เปิดเมนู">&#9776;</button>
+  <ul class="navlinks">
+    <li><a href="index.html">หน้าหลัก</a></li>
+    <li><a href="personal.html">ประวัติส่วนตัว</a></li>
+    <li><a href="education.html" aria-current="page">ประวัติการศึกษา</a></li>
+    <li><a href="activities.html">ผลงาน</a></li>
+    <li><a href="contact.html">ติดต่อ</a></li>
+  </ul>
+</nav>
+ 
+<main>
+  <header class="page-header">
+    <span class="eyebrow">02 · Education</span>
+    <h1>ประวัติการศึกษา</h1>
+  </header>
+ 
+  <div class="card">
+    <!-- แก้ปี ชื่อโรงเรียน และรายละเอียดในแต่ละ <li> ให้ตรงกับของจริง -->
+    <ul class="timeline">
+      <li>
+        <span class="year">ระดับมัธยมศึกษาตอนปลาย</span>
+        <h3>ชื่อโรงเรียน (แก้ไขตรงนี้)</h3>
+        <p>กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 แผนการเรียน (ระบุแผนการเรียน เช่น วิทย์-คณิต)</p>
+      </li>
+      <li>
+        <span class="year">ระดับมัธยมศึกษาตอนต้น</span>
+        <h3>ชื่อโรงเรียน (แก้ไขตรงนี้)</h3>
+        <p>รายละเอียดเพิ่มเติม เช่น เกรดเฉลี่ย หรือกิจกรรมเด่นในช่วงนั้น</p>
+      </li>
+      <li>
+        <span class="year">ระดับประถมศึกษา</span>
+        <h3>ชื่อโรงเรียน (แก้ไขตรงนี้)</h3>
+        <p>รายละเอียดเพิ่มเติม</p>
+      </li>
+    </ul>
+  </div>
+ 
+  <div class="note">
+    หน้านี้เป็นเทมเพลตตัวอย่าง สามารถแก้ไขชื่อโรงเรียน ปีการศึกษา และรายละเอียดในไฟล์ education.html ให้ตรงกับข้อมูลจริงได้เลย
+  </div>
+</main>
+ 
+<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
+ 
+<script src="script.js"></script>
+</body>
