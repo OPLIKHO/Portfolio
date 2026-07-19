@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ประวัติส่วนตัว | กรเอก มหาโภคินวงษ์</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="components.css">
 </head>
 <body>
+
+<canvas id="bg-canvas"></canvas>
 
 <nav class="topnav">
   <div class="brand">
@@ -25,14 +28,18 @@
 
 <main>
   <header class="page-header">
-    <span class="eyebrow">01 · About</span>
+    <span class="eyebrow">Module 01 // Identity File</span>
     <h1>ประวัติส่วนตัว</h1>
+    <div class="rule"></div>
   </header>
 
   <div class="card">
     <div class="profile-block">
-      <!-- รูปโปรไฟล์: เปลี่ยนไฟล์ในโฟลเดอร์ images/ แล้วแก้ src ด้านล่างได้เลย -->
-      <img class="profile-photo" src="images/พานทอง.png" alt="รูปกรเอก มหาโภคินวงษ์">
+      <div class="profile-photo-wrap hud-corners">
+        <div class="id-card-scan"></div>
+        <!-- รูปโปรไฟล์: เปลี่ยนไฟล์ในโฟลเดอร์ images/ แล้วแก้ src ด้านล่างได้เลย -->
+        <img src="images/พานทอง.png" alt="รูปกรเอก มหาโภคินวงษ์">
+      </div>
 
       <dl class="info-list">
         <dt>ชื่อ</dt><dd>กรเอก มหาโภคินวงษ์</dd>
@@ -46,8 +53,12 @@
   </div>
 </main>
 
-<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
+<footer>
+  <div class="footer-status">System Status: Online</div>
+  <div>&copy; 2100 กรเอก มหาโภคินวงษ์ — Portfolio OS</div>
+</footer>
 
 <script src="script.js"></script>
+<script src="effects.js"></script>
 </body>
 </html>
