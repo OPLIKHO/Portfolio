@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ผลงาน | กรเอก มหาโภคินวงษ์</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="components.css">
 </head>
 <body>
+
+<canvas id="bg-canvas"></canvas>
 
 <nav class="topnav">
   <div class="brand">
@@ -25,14 +28,15 @@
 
 <main>
   <header class="page-header">
-    <span class="eyebrow">03 · Works</span>
+    <span class="eyebrow">Module 03 // Archive</span>
     <h1>ผลงาน</h1>
+    <div class="rule"></div>
   </header>
 
   <div class="work-grid">
     <!-- คัดลอกบล็อก .work-card ทั้งก้อนเพื่อเพิ่มผลงานใหม่ -->
-    <div class="card work-card">
-      <div class="thumb">
+    <div class="work-card">
+      <div class="thumb hud-corners">
         <!-- เปลี่ยนเป็น <img src="images/ชื่อไฟล์.png" alt="..."> เมื่อมีรูปผลงาน -->
         <span>รูปผลงานที่ 1</span>
       </div>
@@ -41,8 +45,8 @@
       <span class="tag">หมวดหมู่</span>
     </div>
 
-    <div class="card work-card">
-      <div class="thumb">
+    <div class="work-card">
+      <div class="thumb hud-corners">
         <span>รูปผลงานที่ 2</span>
       </div>
       <h3>ชื่อผลงาน (แก้ไขตรงนี้)</h3>
@@ -50,8 +54,8 @@
       <span class="tag">หมวดหมู่</span>
     </div>
 
-    <div class="card work-card">
-      <div class="thumb">
+    <div class="work-card">
+      <div class="thumb hud-corners">
         <span>รูปผลงานที่ 3</span>
       </div>
       <h3>ชื่อผลงาน (แก้ไขตรงนี้)</h3>
@@ -60,13 +64,17 @@
     </div>
   </div>
 
-  <div class="note" style="margin-top:22px;">
-    หน้านี้เป็นเทมเพลตตัวอย่าง สามารถเพิ่ม/ลบการ์ดผลงาน และแก้ข้อความในไฟล์ activities.html ให้ตรงกับผลงานจริงได้เลย
+  <div class="note" style="margin-top:26px;">
+    &gt; หน้านี้เป็นเทมเพลตตัวอย่าง สามารถเพิ่ม/ลบการ์ดผลงาน และแก้ข้อความในไฟล์ activities.html ให้ตรงกับผลงานจริงได้เลย
   </div>
 </main>
 
-<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
+<footer>
+  <div class="footer-status">System Status: Online</div>
+  <div>&copy; 2100 กรเอก มหาโภคินวงษ์ — Portfolio OS</div>
+</footer>
 
 <script src="script.js"></script>
+<script src="effects.js"></script>
 </body>
 </html>
