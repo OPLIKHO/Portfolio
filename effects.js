@@ -12,6 +12,7 @@
     }
     initTypewriter();
     initBootSequence();
+    initPageTransition();
   });
 
   /* ---------------------------------------------------------
@@ -230,5 +231,46 @@
       setTimeout(nextLine, 360);
     }
     setTimeout(nextLine, 200);
+  }
+
+  /* ---------------------------------------------------------
+     Page transition — "door warp" between pages
+     --------------------------------------------------------- */
+  function initPageTransition() {
+    var overlay = document.getElementById('page-transition');
+    if (!overlay) return;
+
+    if (reduceMotion) {
+      overlay.classList.add('is-open');
+      return;
+    }
+
+    // Reveal: doors slide open shortly after this page has painted.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        overlay.classList.add('is-open');
+      });
+    });
+
+    var links = document.querySelectorAll('a[href$=".html"]');
+    links.forEach(function (link) {
+      if (link.getAttribute('aria-current') === 'page') return;
+      if (link.target === '_blank') return;
+
+      link.addEventListener('click', function (e) {
+        // let ctrl/cmd/shift/middle-click open in a new tab as normal
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+
+        e.preventDefault();
+        var destination = link.getAttribute('href');
+
+        overlay.classList.remove('is-open');   // doors slide shut
+        overlay.classList.add('is-closing');
+
+        setTimeout(function () {
+          window.location.href = destination;
+        }, 560);
+      });
+    });
   }
 })();
