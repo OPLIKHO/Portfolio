@@ -516,3 +516,41 @@ dl.info-list dd {
   font-size: 0.9rem;
 }
 .terminal-line .prompt { color: var(--cyan); }
+
+/* ---------- Page transition — door warp ---------- */
+#page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+}
+
+#page-transition .door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background:
+    linear-gradient(180deg, rgba(120,190,255,0.06), transparent 40%),
+    linear-gradient(180deg, var(--panel-2), var(--void) 75%);
+  transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+#page-transition .door-left  { left: 0;  border-right: 1px solid var(--cyan); }
+#page-transition .door-right { right: 0; border-left: 1px solid var(--cyan); }
+
+#page-transition.is-open .door-left  { transform: translateX(-100%); }
+#page-transition.is-open .door-right { transform: translateX(100%); }
+
+#page-transition .warp-core {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-50%);
+  background: var(--cyan);
+  box-shadow: 0 0 24px 4px var(--cyan), 0 0 70px 14px rgba(0,229,255,0.5);
+  opacity: 1;
+  transition: opacity 0.35s ease 0.15s;
+}
+#page-transition.is-open .warp-core { opacity: 0; transition: opacity 0.3s ease; }
