@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio ของ กรเอก มหาโภคินวงษ์</title>
+<title>Portfolio OS — กรเอก มหาโภคินวงษ์</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="components.css">
 </head>
 <body>
- 
+
+<div id="boot-overlay" aria-hidden="false">
+  <div class="boot-line">PORTFOLIO OS v2.100.4 — BOOTING<span class="boot-cursor"></span></div>
+</div>
+
+<canvas id="bg-canvas"></canvas>
+
 <nav class="topnav">
   <div class="brand">
     <span class="brand-badge">OQ</span>
@@ -22,66 +29,76 @@
     <li><a href="contact.html">ติดต่อ</a></li>
   </ul>
 </nav>
- 
+
 <main>
   <section class="hero">
     <div>
-      <h1>Portfolio of <br><span class="accent">Gornerk Mahapokinwong</h1>
-      <p class="lede">นักเรียนชั้นมัธยมศึกษาปีที่ 6 เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา และผลงานของผมไว้ในที่เดียว เพื่อใช้แนะนำตัวสำหรับการศึกษาต่อและโอกาสต่างๆ</p>
+      <span class="kicker">// SYSTEM ONLINE — YEAR 2100</span>
+      <h1>PORTFOLIO OF<br>
+        <span class="glitch" data-text="GORNERK MAHAPOKINWONG">GORNERK MAHAPOKINWONG</span>
+      </h1>
+      <p class="lede"><span data-type="นักเรียนชั้นมัธยมศึกษาปีที่ 6 เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา และผลงานของผมไว้ในที่เดียว เพื่อใช้แนะนำตัวสำหรับการศึกษาต่อและโอกาสต่างๆ"></span></p>
       <div class="hero-cta">
-        <a href="personal.html" class="btn btn-solid">ดูประวัติส่วนตัว</a>
-        <a href="contact.html" class="btn btn-ghost">ช่องการติดต่อ</a>
+        <a href="personal.html" class="btn btn-solid">&gt; ดูประวัติส่วนตัว</a>
+        <a href="contact.html" class="btn btn-ghost">&gt; ช่องการติดต่อ</a>
       </div>
     </div>
- 
+
     <div class="id-card">
+      <div class="id-card-scan"></div>
       <div class="id-card-top">
-        <span class="school">STUDENT PORTFOLIO ID</span>
-        <span class="gold-dot"></span>
+        <span>ACCESS CARD</span>
+        <span>2100</span>
       </div>
-      <div class="id-card-body">
-        <div class="id-photo">
-          <!-- เปลี่ยนรูปได้ที่ personal.html -->
-          <span>รูปนักเรียน</span>
-        </div>
-        <div class="id-info">
-          <div class="name">กรเอก มหาโภคินวงษ์</div>
-          <div class="role">ชั้นมัธยมศึกษาปีที่ 6</div>
-          <div class="role">ชื่อเล่น: โอคิว</div>
-        </div>
+      <div class="id-photo">
+        <!-- เปลี่ยนรูปได้ที่ personal.html / ใส่ไฟล์ images/พานทอง.png -->
+        <span>รูปนักเรียน</span>
       </div>
-      <div class="id-card-strip"></div>
+      <div class="name">กรเอก มหาโภคินวงษ์</div>
+      <div class="role">ชั้นมัธยมศึกษาปีที่ 6 · ชื่อเล่น: โอคิว</div>
+      <div class="barcode"></div>
+      <div class="idnum">ID// OQ-2100-006 · CLEARANCE: STUDENT</div>
     </div>
   </section>
- 
-  <section>
-    <div class="grid-links">
-      <a class="link-card" href="personal.html">
-        <span class="num">01</span>
+
+  <section class="console">
+    <div class="eyebrow">Navigation Hub</div>
+    <div class="console-trace"></div>
+    <div class="console-grid">
+      <a class="console-node" href="personal.html">
+        <span class="num">MODULE 01</span>
+        <div class="console-icon">&#9679;</div>
         <h3>ประวัติส่วนตัว</h3>
         <p>ข้อมูลทั่วไปและรูปภาพของผม</p>
       </a>
-      <a class="link-card" href="education.html">
-        <span class="num">02</span>
+      <a class="console-node" href="education.html">
+        <span class="num">MODULE 02</span>
+        <div class="console-icon">&#9670;</div>
         <h3>ประวัติการศึกษา</h3>
         <p>เส้นทางการเรียนตั้งแต่อดีตถึงปัจจุบัน</p>
       </a>
-      <a class="link-card" href="activities.html">
-        <span class="num">03</span>
+      <a class="console-node" href="activities.html">
+        <span class="num">MODULE 03</span>
+        <div class="console-icon">&#9632;</div>
         <h3>ผลงาน</h3>
         <p>ผลงานและกิจกรรมที่เคยทำ</p>
       </a>
-      <a class="link-card" href="contact.html">
-        <span class="num">04</span>
+      <a class="console-node" href="contact.html">
+        <span class="num">MODULE 04</span>
+        <div class="console-icon">&#9993;</div>
         <h3>ติดต่อ</h3>
         <p>ช่องทางการติดต่อผม</p>
       </a>
     </div>
   </section>
 </main>
- 
-<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
- 
+
+<footer>
+  <div class="footer-status">System Status: Online</div>
+  <div>&copy; 2100 กรเอก มหาโภคินวงษ์ — Portfolio OS</div>
+</footer>
+
 <script src="script.js"></script>
+<script src="effects.js"></script>
 </body>
 </html>
